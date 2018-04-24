@@ -12,7 +12,7 @@
     + 添加了一个触发器，当飞碟碰到触发器时消失。
 
 + UML类图
-![UML]()
+![UML](https://github.com/SO4P/Unity5/blob/master/5.1.png)
 + 代码：
     + 物理运动
   
