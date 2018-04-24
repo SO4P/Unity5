@@ -48,7 +48,12 @@
 	            public override void Update () {
                     if (move)
                     {
-                        if(sceneController.disk.findDisk(this.transform.name) == null)
+                        if(this.gameobject == null)
+                        {
+                            start = false;
+                            move = false;
+                        }
+                        else if (sceneController.disk.findDisk(this.transform.name) == null)
                         {
                             start = false;
                             move = false;
@@ -68,7 +73,7 @@
                     else
                     {
                         if (this.gameobject != null)
-                        sceneController.disk.destroy   (this.transform.name);
+                            sceneController.disk.destroy(this.transform.name);
                         this.destroy = true;
                         this.callback.SSActionEvent(this);
                     }
